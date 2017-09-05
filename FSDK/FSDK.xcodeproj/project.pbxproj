@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D33B1731F5EB85A008AD60A /* FSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D33B1691F5EB85A008AD60A /* FSDK.framework */; };
+		0D33B1781F5EB85A008AD60A /* FSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D33B1771F5EB85A008AD60A /* FSDKTests.swift */; };
+		0D33B17A1F5EB85B008AD60A /* FSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B16C1F5EB85A008AD60A /* FSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1851F5EB863008AD60A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D33B1841F5EB863008AD60A /* SystemConfiguration.framework */; };
+		0D33B1871F5EB867008AD60A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D33B1861F5EB867008AD60A /* CoreVideo.framework */; };
+		0D33B1891F5EB86C008AD60A /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D33B1881F5EB86C008AD60A /* VideoToolbox.framework */; };
+		0D33B18B1F5EB871008AD60A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D33B18A1F5EB871008AD60A /* libc++.tbd */; };
+		0D33B18D1F5EB876008AD60A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D33B18C1F5EB876008AD60A /* libsqlite3.0.tbd */; };
+		0D33B1AA1F5EB895008AD60A /* RTCAudioSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B18F1F5EB895008AD60A /* RTCAudioSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1AB1F5EB895008AD60A /* RTCAudioTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1901F5EB895008AD60A /* RTCAudioTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1AC1F5EB895008AD60A /* RTCDataChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1911F5EB895008AD60A /* RTCDataChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1AD1F5EB895008AD60A /* RTCEAGLVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1921F5EB895008AD60A /* RTCEAGLVideoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1AE1F5EB895008AD60A /* RTCI420Frame.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1931F5EB895008AD60A /* RTCI420Frame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1AF1F5EB895008AD60A /* RTCICECandidate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1941F5EB895008AD60A /* RTCICECandidate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1B01F5EB895008AD60A /* RTCICEServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1951F5EB895008AD60A /* RTCICEServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1B11F5EB895008AD60A /* RTCMediaConstraints.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1961F5EB895008AD60A /* RTCMediaConstraints.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1B21F5EB895008AD60A /* RTCMediaSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1971F5EB895008AD60A /* RTCMediaSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1B31F5EB895008AD60A /* RTCMediaStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1981F5EB895008AD60A /* RTCMediaStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1B41F5EB895008AD60A /* RTCMediaStreamTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1991F5EB895008AD60A /* RTCMediaStreamTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1B51F5EB895008AD60A /* RTCNSGLVideoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B19A1F5EB895008AD60A /* RTCNSGLVideoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1B61F5EB895008AD60A /* RTCOpenGLVideoRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B19B1F5EB895008AD60A /* RTCOpenGLVideoRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1B71F5EB895008AD60A /* RTCPair.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B19C1F5EB895008AD60A /* RTCPair.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1B81F5EB895008AD60A /* RTCPeerConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B19D1F5EB895008AD60A /* RTCPeerConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1B91F5EB895008AD60A /* RTCPeerConnectionDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B19E1F5EB895008AD60A /* RTCPeerConnectionDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1BA1F5EB895008AD60A /* RTCPeerConnectionFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B19F1F5EB895008AD60A /* RTCPeerConnectionFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1BB1F5EB895008AD60A /* RTCSessionDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1A01F5EB895008AD60A /* RTCSessionDescription.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1BC1F5EB895008AD60A /* RTCSessionDescriptionDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1A11F5EB895008AD60A /* RTCSessionDescriptionDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1BD1F5EB895008AD60A /* RTCStatsDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1A21F5EB895008AD60A /* RTCStatsDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1BE1F5EB895008AD60A /* RTCStatsReport.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1A31F5EB895008AD60A /* RTCStatsReport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1BF1F5EB895008AD60A /* RTCTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1A41F5EB895008AD60A /* RTCTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1C01F5EB895008AD60A /* RTCVideoCapturer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1A51F5EB895008AD60A /* RTCVideoCapturer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1C11F5EB895008AD60A /* RTCVideoRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1A61F5EB895008AD60A /* RTCVideoRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1C21F5EB895008AD60A /* RTCVideoSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1A71F5EB895008AD60A /* RTCVideoSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1C31F5EB895008AD60A /* RTCVideoTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1A81F5EB895008AD60A /* RTCVideoTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B1C41F5EB895008AD60A /* SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D33B1A91F5EB895008AD60A /* SRWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D33B2311F5EC165008AD60A /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D33B2301F5EC165008AD60A /* DeviceModel.swift */; };
+		0D33B2341F5EC16E008AD60A /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D33B2331F5EC16E008AD60A /* ServiceManager.swift */; };
+		0D33B23D1F5EC287008AD60A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D33B23C1F5EC287008AD60A /* Constant.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0D33B1741F5EB85A008AD60A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D33B1601F5EB85A008AD60A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D33B1681F5EB85A008AD60A;
+			remoteInfo = FSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D33B1691F5EB85A008AD60A /* FSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D33B16C1F5EB85A008AD60A /* FSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSDK.h; sourceTree = "<group>"; };
+		0D33B16D1F5EB85A008AD60A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D33B1721F5EB85A008AD60A /* FSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D33B1771F5EB85A008AD60A /* FSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSDKTests.swift; sourceTree = "<group>"; };
+		0D33B1791F5EB85B008AD60A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D33B1841F5EB863008AD60A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0D33B1861F5EB867008AD60A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		0D33B1881F5EB86C008AD60A /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		0D33B18A1F5EB871008AD60A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		0D33B18C1F5EB876008AD60A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		0D33B18F1F5EB895008AD60A /* RTCAudioSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCAudioSource.h; sourceTree = "<group>"; };
+		0D33B1901F5EB895008AD60A /* RTCAudioTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCAudioTrack.h; sourceTree = "<group>"; };
+		0D33B1911F5EB895008AD60A /* RTCDataChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCDataChannel.h; sourceTree = "<group>"; };
+		0D33B1921F5EB895008AD60A /* RTCEAGLVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCEAGLVideoView.h; sourceTree = "<group>"; };
+		0D33B1931F5EB895008AD60A /* RTCI420Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCI420Frame.h; sourceTree = "<group>"; };
+		0D33B1941F5EB895008AD60A /* RTCICECandidate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCICECandidate.h; sourceTree = "<group>"; };
+		0D33B1951F5EB895008AD60A /* RTCICEServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCICEServer.h; sourceTree = "<group>"; };
+		0D33B1961F5EB895008AD60A /* RTCMediaConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCMediaConstraints.h; sourceTree = "<group>"; };
+		0D33B1971F5EB895008AD60A /* RTCMediaSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCMediaSource.h; sourceTree = "<group>"; };
+		0D33B1981F5EB895008AD60A /* RTCMediaStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCMediaStream.h; sourceTree = "<group>"; };
+		0D33B1991F5EB895008AD60A /* RTCMediaStreamTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCMediaStreamTrack.h; sourceTree = "<group>"; };
+		0D33B19A1F5EB895008AD60A /* RTCNSGLVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCNSGLVideoView.h; sourceTree = "<group>"; };
+		0D33B19B1F5EB895008AD60A /* RTCOpenGLVideoRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCOpenGLVideoRenderer.h; sourceTree = "<group>"; };
+		0D33B19C1F5EB895008AD60A /* RTCPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCPair.h; sourceTree = "<group>"; };
+		0D33B19D1F5EB895008AD60A /* RTCPeerConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCPeerConnection.h; sourceTree = "<group>"; };
+		0D33B19E1F5EB895008AD60A /* RTCPeerConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCPeerConnectionDelegate.h; sourceTree = "<group>"; };
+		0D33B19F1F5EB895008AD60A /* RTCPeerConnectionFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCPeerConnectionFactory.h; sourceTree = "<group>"; };
+		0D33B1A01F5EB895008AD60A /* RTCSessionDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCSessionDescription.h; sourceTree = "<group>"; };
+		0D33B1A11F5EB895008AD60A /* RTCSessionDescriptionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCSessionDescriptionDelegate.h; sourceTree = "<group>"; };
+		0D33B1A21F5EB895008AD60A /* RTCStatsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCStatsDelegate.h; sourceTree = "<group>"; };
+		0D33B1A31F5EB895008AD60A /* RTCStatsReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCStatsReport.h; sourceTree = "<group>"; };
+		0D33B1A41F5EB895008AD60A /* RTCTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCTypes.h; sourceTree = "<group>"; };
+		0D33B1A51F5EB895008AD60A /* RTCVideoCapturer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCVideoCapturer.h; sourceTree = "<group>"; };
+		0D33B1A61F5EB895008AD60A /* RTCVideoRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCVideoRenderer.h; sourceTree = "<group>"; };
+		0D33B1A71F5EB895008AD60A /* RTCVideoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCVideoSource.h; sourceTree = "<group>"; };
+		0D33B1A81F5EB895008AD60A /* RTCVideoTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCVideoTrack.h; sourceTree = "<group>"; };
+		0D33B1A91F5EB895008AD60A /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		0D33B2301F5EC165008AD60A /* DeviceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
+		0D33B2331F5EC16E008AD60A /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		0D33B23C1F5EC287008AD60A /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D33B1651F5EB85A008AD60A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D33B18D1F5EB876008AD60A /* libsqlite3.0.tbd in Frameworks */,
+				0D33B18B1F5EB871008AD60A /* libc++.tbd in Frameworks */,
+				0D33B1891F5EB86C008AD60A /* VideoToolbox.framework in Frameworks */,
+				0D33B1871F5EB867008AD60A /* CoreVideo.framework in Frameworks */,
+				0D33B1851F5EB863008AD60A /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D33B16F1F5EB85A008AD60A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D33B1731F5EB85A008AD60A /* FSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D33B15F1F5EB85A008AD60A = {
+			isa = PBXGroup;
+			children = (
+				0D33B16B1F5EB85A008AD60A /* FSDK */,
+				0D33B1761F5EB85A008AD60A /* FSDKTests */,
+				0D33B16A1F5EB85A008AD60A /* Products */,
+				0D33B1831F5EB863008AD60A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0D33B16A1F5EB85A008AD60A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0D33B1691F5EB85A008AD60A /* FSDK.framework */,
+				0D33B1721F5EB85A008AD60A /* FSDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0D33B16B1F5EB85A008AD60A /* FSDK */ = {
+			isa = PBXGroup;
+			children = (
+				0D33B23B1F5EC264008AD60A /* Constant */,
+				0D33B2321F5EC167008AD60A /* Manager */,
+				0D33B22F1F5EC149008AD60A /* Model */,
+				0D33B18E1F5EB87A008AD60A /* RTC */,
+				0D33B16C1F5EB85A008AD60A /* FSDK.h */,
+				0D33B16D1F5EB85A008AD60A /* Info.plist */,
+			);
+			path = FSDK;
+			sourceTree = "<group>";
+		};
+		0D33B1761F5EB85A008AD60A /* FSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				0D33B1771F5EB85A008AD60A /* FSDKTests.swift */,
+				0D33B1791F5EB85B008AD60A /* Info.plist */,
+			);
+			path = FSDKTests;
+			sourceTree = "<group>";
+		};
+		0D33B1831F5EB863008AD60A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D33B18C1F5EB876008AD60A /* libsqlite3.0.tbd */,
+				0D33B18A1F5EB871008AD60A /* libc++.tbd */,
+				0D33B1881F5EB86C008AD60A /* VideoToolbox.framework */,
+				0D33B1861F5EB867008AD60A /* CoreVideo.framework */,
+				0D33B1841F5EB863008AD60A /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0D33B18E1F5EB87A008AD60A /* RTC */ = {
+			isa = PBXGroup;
+			children = (
+				0D33B18F1F5EB895008AD60A /* RTCAudioSource.h */,
+				0D33B1901F5EB895008AD60A /* RTCAudioTrack.h */,
+				0D33B1911F5EB895008AD60A /* RTCDataChannel.h */,
+				0D33B1921F5EB895008AD60A /* RTCEAGLVideoView.h */,
+				0D33B1931F5EB895008AD60A /* RTCI420Frame.h */,
+				0D33B1941F5EB895008AD60A /* RTCICECandidate.h */,
+				0D33B1951F5EB895008AD60A /* RTCICEServer.h */,
+				0D33B1961F5EB895008AD60A /* RTCMediaConstraints.h */,
+				0D33B1971F5EB895008AD60A /* RTCMediaSource.h */,
+				0D33B1981F5EB895008AD60A /* RTCMediaStream.h */,
+				0D33B1991F5EB895008AD60A /* RTCMediaStreamTrack.h */,
+				0D33B19A1F5EB895008AD60A /* RTCNSGLVideoView.h */,
+				0D33B19B1F5EB895008AD60A /* RTCOpenGLVideoRenderer.h */,
+				0D33B19C1F5EB895008AD60A /* RTCPair.h */,
+				0D33B19D1F5EB895008AD60A /* RTCPeerConnection.h */,
+				0D33B19E1F5EB895008AD60A /* RTCPeerConnectionDelegate.h */,
+				0D33B19F1F5EB895008AD60A /* RTCPeerConnectionFactory.h */,
+				0D33B1A01F5EB895008AD60A /* RTCSessionDescription.h */,
+				0D33B1A11F5EB895008AD60A /* RTCSessionDescriptionDelegate.h */,
+				0D33B1A21F5EB895008AD60A /* RTCStatsDelegate.h */,
+				0D33B1A31F5EB895008AD60A /* RTCStatsReport.h */,
+				0D33B1A41F5EB895008AD60A /* RTCTypes.h */,
+				0D33B1A51F5EB895008AD60A /* RTCVideoCapturer.h */,
+				0D33B1A61F5EB895008AD60A /* RTCVideoRenderer.h */,
+				0D33B1A71F5EB895008AD60A /* RTCVideoSource.h */,
+				0D33B1A81F5EB895008AD60A /* RTCVideoTrack.h */,
+				0D33B1A91F5EB895008AD60A /* SRWebSocket.h */,
+			);
+			name = RTC;
+			sourceTree = "<group>";
+		};
+		0D33B22F1F5EC149008AD60A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D33B2301F5EC165008AD60A /* DeviceModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0D33B2321F5EC167008AD60A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0D33B2331F5EC16E008AD60A /* ServiceManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		0D33B23B1F5EC264008AD60A /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				0D33B23C1F5EC287008AD60A /* Constant.swift */,
+			);
+			name = Constant;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0D33B1661F5EB85A008AD60A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D33B1BE1F5EB895008AD60A /* RTCStatsReport.h in Headers */,
+				0D33B1B21F5EB895008AD60A /* RTCMediaSource.h in Headers */,
+				0D33B1B41F5EB895008AD60A /* RTCMediaStreamTrack.h in Headers */,
+				0D33B1C41F5EB895008AD60A /* SRWebSocket.h in Headers */,
+				0D33B1AA1F5EB895008AD60A /* RTCAudioSource.h in Headers */,
+				0D33B1AB1F5EB895008AD60A /* RTCAudioTrack.h in Headers */,
+				0D33B1AC1F5EB895008AD60A /* RTCDataChannel.h in Headers */,
+				0D33B1B71F5EB895008AD60A /* RTCPair.h in Headers */,
+				0D33B17A1F5EB85B008AD60A /* FSDK.h in Headers */,
+				0D33B1AD1F5EB895008AD60A /* RTCEAGLVideoView.h in Headers */,
+				0D33B1B01F5EB895008AD60A /* RTCICEServer.h in Headers */,
+				0D33B1B91F5EB895008AD60A /* RTCPeerConnectionDelegate.h in Headers */,
+				0D33B1B11F5EB895008AD60A /* RTCMediaConstraints.h in Headers */,
+				0D33B1AF1F5EB895008AD60A /* RTCICECandidate.h in Headers */,
+				0D33B1BF1F5EB895008AD60A /* RTCTypes.h in Headers */,
+				0D33B1B51F5EB895008AD60A /* RTCNSGLVideoView.h in Headers */,
+				0D33B1C21F5EB895008AD60A /* RTCVideoSource.h in Headers */,
+				0D33B1AE1F5EB895008AD60A /* RTCI420Frame.h in Headers */,
+				0D33B1B61F5EB895008AD60A /* RTCOpenGLVideoRenderer.h in Headers */,
+				0D33B1C31F5EB895008AD60A /* RTCVideoTrack.h in Headers */,
+				0D33B1BA1F5EB895008AD60A /* RTCPeerConnectionFactory.h in Headers */,
+				0D33B1B81F5EB895008AD60A /* RTCPeerConnection.h in Headers */,
+				0D33B1BD1F5EB895008AD60A /* RTCStatsDelegate.h in Headers */,
+				0D33B1C11F5EB895008AD60A /* RTCVideoRenderer.h in Headers */,
+				0D33B1BC1F5EB895008AD60A /* RTCSessionDescriptionDelegate.h in Headers */,
+				0D33B1B31F5EB895008AD60A /* RTCMediaStream.h in Headers */,
+				0D33B1C01F5EB895008AD60A /* RTCVideoCapturer.h in Headers */,
+				0D33B1BB1F5EB895008AD60A /* RTCSessionDescription.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0D33B1681F5EB85A008AD60A /* FSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D33B17D1F5EB85B008AD60A /* Build configuration list for PBXNativeTarget "FSDK" */;
+			buildPhases = (
+				0D33B1641F5EB85A008AD60A /* Sources */,
+				0D33B1651F5EB85A008AD60A /* Frameworks */,
+				0D33B1661F5EB85A008AD60A /* Headers */,
+				0D33B1671F5EB85A008AD60A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FSDK;
+			productName = FSDK;
+			productReference = 0D33B1691F5EB85A008AD60A /* FSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0D33B1711F5EB85A008AD60A /* FSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D33B1801F5EB85B008AD60A /* Build configuration list for PBXNativeTarget "FSDKTests" */;
+			buildPhases = (
+				0D33B16E1F5EB85A008AD60A /* Sources */,
+				0D33B16F1F5EB85A008AD60A /* Frameworks */,
+				0D33B1701F5EB85A008AD60A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D33B1751F5EB85A008AD60A /* PBXTargetDependency */,
+			);
+			name = FSDKTests;
+			productName = FSDKTests;
+			productReference = 0D33B1721F5EB85A008AD60A /* FSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0D33B1601F5EB85A008AD60A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Avviotech;
+				TargetAttributes = {
+					0D33B1681F5EB85A008AD60A = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 8DGCMQDWZG;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					0D33B1711F5EB85A008AD60A = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 8DGCMQDWZG;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 0D33B1631F5EB85A008AD60A /* Build configuration list for PBXProject "FSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0D33B15F1F5EB85A008AD60A;
+			productRefGroup = 0D33B16A1F5EB85A008AD60A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0D33B1681F5EB85A008AD60A /* FSDK */,
+				0D33B1711F5EB85A008AD60A /* FSDKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0D33B1671F5EB85A008AD60A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D33B1701F5EB85A008AD60A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0D33B1641F5EB85A008AD60A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D33B2311F5EC165008AD60A /* DeviceModel.swift in Sources */,
+				0D33B2341F5EC16E008AD60A /* ServiceManager.swift in Sources */,
+				0D33B23D1F5EC287008AD60A /* Constant.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D33B16E1F5EB85A008AD60A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D33B1781F5EB85A008AD60A /* FSDKTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D33B1751F5EB85A008AD60A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D33B1681F5EB85A008AD60A /* FSDK */;
+			targetProxy = 0D33B1741F5EB85A008AD60A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D33B17B1F5EB85B008AD60A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0D33B17C1F5EB85B008AD60A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0D33B17E1F5EB85B008AD60A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8DGCMQDWZG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.avviotech.labs.project.FSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0D33B17F1F5EB85B008AD60A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8DGCMQDWZG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.avviotech.labs.project.FSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		0D33B1811F5EB85B008AD60A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8DGCMQDWZG;
+				INFOPLIST_FILE = FSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.avviotech.labs.project.FSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0D33B1821F5EB85B008AD60A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 8DGCMQDWZG;
+				INFOPLIST_FILE = FSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.avviotech.labs.project.FSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D33B1631F5EB85A008AD60A /* Build configuration list for PBXProject "FSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D33B17B1F5EB85B008AD60A /* Debug */,
+				0D33B17C1F5EB85B008AD60A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D33B17D1F5EB85B008AD60A /* Build configuration list for PBXNativeTarget "FSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D33B17E1F5EB85B008AD60A /* Debug */,
+				0D33B17F1F5EB85B008AD60A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D33B1801F5EB85B008AD60A /* Build configuration list for PBXNativeTarget "FSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D33B1811F5EB85B008AD60A /* Debug */,
+				0D33B1821F5EB85B008AD60A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0D33B1601F5EB85A008AD60A /* Project object */;
+}
