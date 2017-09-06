@@ -18,7 +18,7 @@ public protocol ServiceManagerProtocol {
 import Foundation
 
 public class ServiceManager : NSObject {
-    static let sharedServiceManager = ServiceManager()
+    static var sharedServiceManager:ServiceManager? = nil
     fileprivate let serviceType = "webrtc-service"
     fileprivate let myPeerId = MCPeerID(displayName: UIDevice.current.name)
     fileprivate var serviceAdvertiser : MCNearbyServiceAdvertiser
@@ -27,22 +27,30 @@ public class ServiceManager : NSObject {
     public var delegate : ServiceManagerProtocol?
     var allDevice = [MCPeerID:DeviceModel]()
     var appType:String = ""
-    override init() {
-        let dInfo:[String : String] = ["type":""]
+    init(type:String) {
+        let dInfo:[String : String] = ["type":type]
         self.serviceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerId, discoveryInfo: dInfo, serviceType: serviceType)
         self.serviceBrowser = MCNearbyServiceBrowser(peer: myPeerId, serviceType: serviceType)
         super.init()
         
-        self.serviceAdvertiser.startAdvertisingPeer()
-        self.serviceBrowser.startBrowsingForPeers()
-        self.serviceAdvertiser.delegate = self
-        self.serviceBrowser.delegate = self
+        if type == "clerk"
+        {
+            self.serviceAdvertiser.startAdvertisingPeer()
+            self.serviceBrowser.startBrowsingForPeers()
+            self.serviceAdvertiser.delegate = self
+            self.serviceBrowser.delegate = self
 
+        }
+        
     }
     
-    public static func getManager() -> ServiceManager
+    public static func getManager(t:String) -> ServiceManager
     {
-        return sharedServiceManager
+        if sharedServiceManager == nil
+        {
+            sharedServiceManager = ServiceManager(type: t)
+        }
+        return sharedServiceManager!
     }
     
     public func stopAdvertising()
@@ -55,9 +63,6 @@ public class ServiceManager : NSObject {
     public func startAdvertising(type:String)
     {
         self.appType = type
-        let dInfo:[String : String] = ["type":type]
-        self.serviceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerId, discoveryInfo: dInfo, serviceType: serviceType)
-        self.serviceAdvertiser.setValue(dInfo, forKey: "discoveryInfo")
         
         self.serviceAdvertiser.startAdvertisingPeer()
         self.serviceBrowser.startBrowsingForPeers()
