@@ -26,6 +26,7 @@ public class ServiceManager : NSObject {
     var selectedPeer:MCPeerID?
     public var delegate : ServiceManagerProtocol?
     var allDevice = [MCPeerID:DeviceModel]()
+    var clerkList = [MCPeerID:DeviceModel]()
     var appType:String = ""
     init(type:String) {
         let dInfo:[String : String] = ["type":type]
@@ -39,7 +40,11 @@ public class ServiceManager : NSObject {
             self.serviceBrowser.startBrowsingForPeers()
             self.serviceAdvertiser.delegate = self
             self.serviceBrowser.delegate = self
-
+            
+        }
+        else{
+            self.serviceBrowser.startBrowsingForPeers()
+            self.serviceBrowser.delegate = self
         }
         
     }
@@ -56,7 +61,6 @@ public class ServiceManager : NSObject {
     public func stopAdvertising()
     {
         self.serviceAdvertiser.stopAdvertisingPeer()
-        self.serviceBrowser.stopBrowsingForPeers()
     }
     
     
@@ -65,12 +69,9 @@ public class ServiceManager : NSObject {
         self.appType = type
         
         self.serviceAdvertiser.startAdvertisingPeer()
-        self.serviceBrowser.startBrowsingForPeers()
         self.serviceAdvertiser.delegate = self
-        self.serviceBrowser.delegate = self
-        
     }
-
+    
     
     
     deinit {
@@ -121,7 +122,7 @@ public class ServiceManager : NSObject {
                     self.allDevice.removeValue(forKey: index)
                     self.delegate?.connectedDevicesChanged(self, connectedDevices: self.allDevice)
                 }
-
+                
             }
         }
         
@@ -167,25 +168,33 @@ extension ServiceManager : MCNearbyServiceBrowserDelegate {
         let type = info?["type"]!
         print("withDiscoveryInfo: \(String(describing: type))")
         let shouldInvite = (myPeerId.displayName.compare(peerID.displayName) == .orderedDescending)
+        
+        if type == "clerk"
+        {
+            print("clerk connected device")
+            let dm = DeviceModel(p:peerID,t: type!,s:"Pending")
+            self.clerkList.updateValue(dm, forKey: peerID)
+        }
+
+        
         if shouldInvite
         {
             browser.invitePeer(peerID, to: self.session, withContext: nil, timeout: 60)
         }
         
-        DispatchQueue.main.async {
-            if type != self.appType && !(type?.isEmpty)!
-            {
-                let dm = DeviceModel(p:peerID,t: type!,s:"Pending")
-                self.allDevice.updateValue(dm, forKey: peerID)
-                self.delegate?.connectedDevicesChanged(self, connectedDevices: self.allDevice)
-            }
-
+        if type != self.appType && !(type?.isEmpty)!
+        {
+            print("client connected device" +  self.appType)
+            let dm = DeviceModel(p:peerID,t: type!,s:"Pending")
+            self.allDevice.updateValue(dm, forKey: peerID)
+            self.delegate?.connectedDevicesChanged(self, connectedDevices: self.allDevice)
         }
-                
         
-        
-        
-        
+    }
+    
+    public func getClerkList() -> [MCPeerID:DeviceModel]
+    {
+        return self.clerkList
     }
     
     public func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
@@ -226,9 +235,9 @@ extension ServiceManager : MCSessionDelegate {
                 let shouldInvite = (myPeerId.displayName.compare(peerID.displayName) == .orderedDescending)
                 if shouldInvite
                 {
-                    self.invitePeer(peerID, to: self.session, withContext: nil, timeout: 60)
+                    self.serviceBrowser.invitePeer(peerID, to: self.session, withContext: nil, timeout: 60)
                 }
-                
+                clerkList.removeValue(forKey: peerID)
                 allDevice.removeValue(forKey: peerID)
                 self.delegate?.connectedDevicesChanged(self, connectedDevices: allDevice)
             }
