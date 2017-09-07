@@ -101,21 +101,27 @@ public class ServiceManager : NSObject {
     
     
     public func callRequest(_ recipient : String, index : MCPeerID) {
-        
+        var isError:Bool = false
         if self.session.connectedPeers.count > 0 {
             var error : NSError?
             do {
                 try self.session.send(recipient.data(using: String.Encoding.utf8, allowLossyConversion: false)!, toPeers: [index], with: MCSessionSendDataMode.reliable)
                 self.selectedPeer = index
+                
+                print("connected peers --- > \(index)")
+            } catch let error1 as NSError {
+                isError = true
+                error = error1
+                print("\(String(describing: error))")
+            }
+            
+            if !isError
+            {
                 DispatchQueue.main.async {
                     self.allDevice.removeValue(forKey: index)
                     self.delegate?.connectedDevicesChanged(self, connectedDevices: self.allDevice)
                 }
-                
-                print("connected peers --- > \(index)")
-            } catch let error1 as NSError {
-                error = error1
-                print("\(String(describing: error))")
+
             }
         }
         
@@ -163,7 +169,7 @@ extension ServiceManager : MCNearbyServiceBrowserDelegate {
         let shouldInvite = (myPeerId.displayName.compare(peerID.displayName) == .orderedDescending)
         if shouldInvite
         {
-            browser.invitePeer(peerID, to: self.session, withContext: nil, timeout: 30)
+            browser.invitePeer(peerID, to: self.session, withContext: nil, timeout: 60)
         }
         
         DispatchQueue.main.async {
@@ -216,6 +222,13 @@ extension ServiceManager : MCSessionDelegate {
                 self.delegate?.connectedDevicesChanged(self, connectedDevices: allDevice)
             }
             else{
+                
+                let shouldInvite = (myPeerId.displayName.compare(peerID.displayName) == .orderedDescending)
+                if shouldInvite
+                {
+                    self.invitePeer(peerID, to: self.session, withContext: nil, timeout: 60)
+                }
+                
                 allDevice.removeValue(forKey: peerID)
                 self.delegate?.connectedDevicesChanged(self, connectedDevices: allDevice)
             }
