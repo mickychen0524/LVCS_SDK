@@ -9,9 +9,9 @@
 import Foundation
 
 
-struct Platform {
+public struct Platform {
     
-    static var isSimulator: Bool {
+    public static var isSimulator: Bool {
         return TARGET_OS_SIMULATOR != 0
     }
 }
