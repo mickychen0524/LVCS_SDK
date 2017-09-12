@@ -197,6 +197,11 @@ extension ServiceManager : MCNearbyServiceBrowserDelegate {
         return self.clerkList
     }
     
+    public func getClientList() -> [MCPeerID:DeviceModel]
+    {
+        return self.allDevice
+    }
+    
     public func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
         print("lostPeer: \(peerID)")
         allDevice.removeValue(forKey: peerID)
