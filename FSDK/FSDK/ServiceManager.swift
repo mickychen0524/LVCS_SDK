@@ -205,6 +205,7 @@ extension ServiceManager : MCNearbyServiceBrowserDelegate {
     public func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
         print("lostPeer: \(peerID)")
         allDevice.removeValue(forKey: peerID)
+        clerkList.removeValue(forKey: peerID)
         self.delegate?.connectedDevicesChanged(self, connectedDevices: allDevice)
         
     }
