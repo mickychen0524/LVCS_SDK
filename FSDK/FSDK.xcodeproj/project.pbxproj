@@ -46,6 +46,7 @@
 		0D33B2341F5EC16E008AD60A /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D33B2331F5EC16E008AD60A /* ServiceManager.swift */; };
 		0D33B23D1F5EC287008AD60A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D33B23C1F5EC287008AD60A /* Constant.swift */; };
 		0D35D7E51F6548510041EC28 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D35D7E41F6548510041EC28 /* Platform.swift */; };
+		0D61B0161F725F1500C6C321 /* ringtone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0D61B0151F725F1500C6C321 /* ringtone.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		0D33B2331F5EC16E008AD60A /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		0D33B23C1F5EC287008AD60A /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		0D35D7E41F6548510041EC28 /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		0D61B0151F725F1500C6C321 /* ringtone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ringtone.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		0D33B16B1F5EB85A008AD60A /* FSDK */ = {
 			isa = PBXGroup;
 			children = (
+				0D61B0151F725F1500C6C321 /* ringtone.mp3 */,
 				0D33B23B1F5EC264008AD60A /* Constant */,
 				0D33B2321F5EC167008AD60A /* Manager */,
 				0D33B22F1F5EC149008AD60A /* Model */,
@@ -362,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D61B0161F725F1500C6C321 /* ringtone.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

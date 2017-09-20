@@ -8,7 +8,8 @@
 
 import Foundation
 import MultipeerConnectivity
-
+import AVFoundation
+import AudioUnit
 public protocol ServiceManagerProtocol {
     func connectedDevicesChanged(_ manager : ServiceManager, connectedDevices: [MCPeerID:DeviceModel])
     func receivedData(_ manager : ServiceManager, peerID : MCPeerID, responseString: String)
@@ -28,6 +29,7 @@ public class ServiceManager : NSObject {
     var allDevice = [MCPeerID:DeviceModel]()
     var clerkList = [MCPeerID:DeviceModel]()
     var appType:String = ""
+    var player : AVAudioPlayer?
     init(type:String) {
         let dInfo:[String : String] = ["type":type]
         self.serviceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerId, discoveryInfo: dInfo, serviceType: serviceType)
@@ -202,6 +204,29 @@ extension ServiceManager : MCNearbyServiceBrowserDelegate {
         return self.allDevice
     }
     
+    public func playSound() {
+        let url = Bundle.main.url(forResource: "ringtone", withExtension: "mp3")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            player.numberOfLoops = -1
+            player.prepareToPlay()
+            player.play()
+        } catch let error as NSError {
+            print(error.description)
+        }
+    }
+    
+    public func stopSound() {
+        do {
+            player?.stop()
+        } catch let error as NSError {
+            print(error.description)
+        }
+    }
+
+    
     public func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
         print("lostPeer: \(peerID)")
         allDevice.removeValue(forKey: peerID)
@@ -275,6 +300,8 @@ extension ServiceManager : MCSessionDelegate {
     public func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {
         print("didStartReceivingResourceWithName")
     }
+    
+    
     
 }
 
